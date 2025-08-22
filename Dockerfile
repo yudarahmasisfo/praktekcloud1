@@ -1,4 +1,4 @@
-#https://github.com/yudarahmasisfo/praktekcloud1
+https://github.com/yudarahmasisfo/praktekcloud1
 # Gunakan base image
 FROM nginx:alpine
 # Buat direktori sementara agar tidak butuh root
