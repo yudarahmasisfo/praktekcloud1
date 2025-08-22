@@ -1,14 +1,11 @@
-# Gunakan image nginx yang sudah siap pakai
-FROM nginx:alpine
+https://github.com/Mandr11/praktekcloud
 
-# Copy file website ke folder default Nginx
-COPY app /usr/share/nginx/html
+# Buat direktori sementara agar tidak butuh root
+RUN mkdir -p /tmp/nginx/logs /tmp/nginx/client-body /tmp/nginx/proxy \
+/tmp/nginx/run /tmp/nginx/fastcgi /tmp/nginx/uwsgi /tmp/nginx/scgi
 
-# Ubah config default: dari port 80 → 7860 (biar sesuai Hugging Face Spaces)
-RUN sed -i 's/listen       80;/listen 7860;/' /etc/nginx/conf.d/default.conf
+# Berikan kepemilikan direktori kepada user 1000
+RUN chown -R 1000:1000 /tmp/nginx/
 
-# Expose port 7860
-EXPOSE 7860
-
-# Jalankan nginx di foreground
-CMD ["nginx", "-g", "daemon off;"]
+# Copy website
+COPY app /app
