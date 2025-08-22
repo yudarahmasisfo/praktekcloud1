@@ -1,6 +1,8 @@
-https://github.com/yudarahmasisfo/praktekcloud1
+
 # Gunakan base image
 FROM nginx:alpine
+
+https://github.com/yudarahmasisfo/praktekcloud1
 # Buat direktori sementara agar tidak butuh root
 RUN mkdir -p /tmp/nginx/logs /tmp/nginx/client-body /tmp/nginx/proxy \
 /tmp/nginx/run /tmp/nginx/fastcgi /tmp/nginx/uwsgi /tmp/nginx/scgi
