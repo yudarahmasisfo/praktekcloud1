@@ -1,6 +1,9 @@
 
-# Gunakan base image
-FROM nginx:alpine
+# Base image PHP-FPM
+FROM php:8.2-fpm-alpine
+
+# Install nginx dan supervisor
+RUN apk add --no-cache nginx supervisor bash curl
 
 # Buat direktori sementara agar tidak butuh root
 RUN mkdir -p /tmp/nginx/logs /tmp/nginx/client-body /tmp/nginx/proxy \
