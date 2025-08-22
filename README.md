@@ -1,6 +1,4 @@
 
-metadata
-
 ----
 title: Praktekcloud1
 emoji: 👀
@@ -13,7 +11,6 @@ pinned: false
 short_description: Ini demo belajar tentang PaaS
 ----
 
-SisfoCloud
 
 Website ini di-host menggunakan Docker di Hugging Face Spaces.
 
