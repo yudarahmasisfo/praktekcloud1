@@ -1,4 +1,4 @@
-https://github.com/yudarahmasisfo/praktekcloud1
+#https://github.com/yudarahmasisfo/praktekcloud1
 
 # Buat direktori sementara agar tidak butuh root
 RUN mkdir -p /tmp/nginx/logs /tmp/nginx/client-body /tmp/nginx/proxy \
